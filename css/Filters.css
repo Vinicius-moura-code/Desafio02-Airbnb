@@ -1,0 +1,18 @@
+.ordenar-busca {
+  margin: 20px;
+  padding: 3px;
+  display: flex;
+}
+.ordenar-busca a {
+  cursor: pointer;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.4);
+  padding: 3px;
+  margin-left: 10px;
+  border-radius: 21px;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+.ordenar-busca a:hover {
+  background-color: blueviolet;
+  color: white;
+}

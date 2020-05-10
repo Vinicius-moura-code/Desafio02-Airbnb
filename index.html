@@ -5,14 +5,18 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+	<link rel="icon" href="img/airbnb-icon.svg" type="image/svg" sizes="16x16">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
 		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/cards.css">
+	<link rel="stylesheet" href="css/Filters.css">
 
 	<title>Airbnb .:. Gama</title>
 </head>
 
 <body>
+
 	<header class="container">
 		<nav class="nav-main">
 			<div class="nav-logo">
@@ -20,71 +24,110 @@
 					<img src="img/logoGama.svg" alt="Gama" />
 				</a>
 			</div>
+			<div class="spinner is-animating" id="bole"><img src="img/gam.png" width="40px" alt="gama spin"></div>
 			<div class="nav-logo" id="airb">
-				<img src="img/Airbnb-Logo.png" style="width: 150px; height: 50px;" alt="Airbnb">
+				<img src="img/Airbnb-Logo.png" style="width: 140px; height: 40px;" alt="Airbnb">
 			</div>
 		</nav>
 	</header>
 
 	<div class="container content conteudo-principal">
 		<div class="main-content">
-			<div class="main-title"><strong>Welcome to the new age</strong>.</div>
-
 			<div class="main-cards">
 				<div class="card">
-					<div class="card-title">Mapi</div>
+					<div class="card-title">Localização</div>
 					<div class="card-content">
-						BR - Internacional
+						(Api maps)
 					</div>
 				</div>
 
 				<div class="card">
 					<div class="card-title">Check-in/Checkout</div>
 					<div class="card-content">
-						10/maio - 31/maio
+						
 					</div>
 				</div>
 
 				<div class="card">
 					<div class="card-title">Hóspedes</div>
 					<div class="card-content">
-						1 - 2
+						
 					</div>
 				</div>
 
 				<div class="card">
-					<input id="searchInput" placeholder="Pesquise seu imovel"></input>
+					<input id="searchInput" placeholder="Busque seu imovel"></input>
 				</div>
 
 				<div class="card-search" onclick="handleSearch()">
-					<i class="fas fa-search"></i>
+					<i class="fas fa-search"><img src="img/busc.png" width="30px" alt=""></i>
 				</div>
 			</div>
 
-
+			<p>
+				<button id="buto" class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample"
+					aria-expanded="false" aria-controls="collapseExample">
+					<img src="img/filter.png" width="30px" alt="Filter">
+				</button>
+			</p>
+			<div class="collapse" style="float: right;" id="collapseExample">
+				<div class="card card-body">
+					<div class="ordenar-busca">
+						<a onclick="ordernamCres()"><img src="img/az.svg" width="30px" alt="De A à Z"></a>
+						<a onclick="ordemDecres()"><img src="img/za.png" width="30px" alt="De Z para A "></a>
+						<a onclick="menorPreco()"><img src="img/menp.png" width="30px" alt="Menor preço"></a>
+						<a onclick="maiorPreco()"><img src="img/maip.png" style="transform: rotateX(180deg);" width="30px"
+								alt="Maior preço"></a>
+					</div>
+				</div>
+			</div>
 
 			<div class="main-quartos" id="quartos">
 				<div class="quartos-titulo">
-					Confira os quartos disponiveis:
+					Escolha o melhor local para você:
 				</div>
 
 				<div class="cards" id="cards"></div>
+
+				<div class="container" id="container__pagination">
+					<div class="pagination">
+						<a class="active" href="javascript:changePage(1)">1</a>
+						<a class="" href="javascript:changePage(2)">2</a>
+						<a class="" href="javascript:changePage(3)">3</a>
+					</div>
+				</div>
 			</div>
 
-			<div class="ordenar-busca">
-				<a onclick="ordernamCres()">A -> Z</a>
-				<a onclick="ordemDecres()">Z -> A</a>
-				<a onclick="menorPreco()">- Preço -</a>
-				<a onclick="maiorPreco()">+ Preço +</a>
+			<div class="container-fluid" id="footer">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="row">
+							<div class="col-md-4">
+								<a href="https://www.linkedin.com/in/vinícius-moura-b95722145"><img class="linkd"
+										src="https://cdn.clipart.email/14a2c4b5305217f1c3013d63d2499198_linkedin-logo-png-image-free-download-searchpngcom_715-715.png"
+										style="margin-left: 45%;" width="60px" height="60px"></a>
+							</div>
+							<div class="col-md-4">
+								<h5 class="text-center" style="margin-top: 4%;">
+									<strong>Desenvolvido por Mr.Vinicius</strong>
+								</h5>
+							</div>
+							<div class="col-md-4">
+								<a href="https://github.com/Vinicius-moura-code"><img class="linkd"
+										src="https://image.flaticon.com/icons/svg/25/25231.svg" style="margin-left: 45%; margin-top: 1%;" width="50px"
+										height="50px"></a>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 
 	</div>
 
-	<footer>
+	</div>
 
 
-	</footer>
 
 
 	<script src="js/scripts.js"></script>
